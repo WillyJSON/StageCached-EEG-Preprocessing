@@ -1,0 +1,29 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Generated pipeline artifacts
+/cache/
+/results/
+/tmp/
+/configs/PROTEUS/*.json
+
+# Raw or generated dataset material (documentation/configuration remains tracked)
+/data/**/*.mat
+/data/**/conversion_manifest.json
+/data/**/validation_report.json
+
+# Local archives, notebooks, and experiment workspaces
+/assets/
+/experiments/
+EXPERIMENTS_*.md
+requirements.txt
+
+# Local legacy prototypes retained outside this focused release
+/src/Preprocessing.py
+/src/Preprocessing_shallownet.py

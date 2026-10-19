@@ -1,0 +1,28 @@
+[project]
+name = "stagecached-eeg-preprocessing"
+version = "1.0.0"
+description = "Stage-cached EEG preprocessing pipeline for PROTEUS BCI recordings."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "WillyJSON", email = "wl_json@outlook.com" }]
+dependencies = [
+    "matplotlib>=3.11.2",
+    "mne>=1.13.2",
+    "numpy>=2.5.3",
+    "python-picard>=0.8.2",
+    "scipy>=1.18.1",
+]
+
+[project.optional-dependencies]
+auto-artifact = [
+    "mne-icalabel>=0.8.1",
+    "pyprep>=0.5.0",
+]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+stagecached-eeg-preprocessing = "stagecached_eeg_preprocessing:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
